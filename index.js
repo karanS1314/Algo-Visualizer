@@ -1,18 +1,18 @@
 // using Document Object Model and jQuery
-function disSortingBtns() { // jab koi sorting in process hai to bnd krna pdega baaki buttons ko
+function disSortingBtn() { // jab koi sorting in process hai to bnd krna pdega baaki buttons ko
   // taaki usable na ho ye
-  $(".bubbleSort").prop('disabled', true);
-  $(".insertionSort").prop('disabled', true);
-  $(".mergeSort").prop('disabled', true);
-  $(".selectionSort").prop('disabled', true);
-  // document.querySelector().disabled = true;
-  // document.querySelector(".insertionSort").disabled = true;
-  // document.querySelector(".mergeSort").disabled = true;
-  // document.querySelector(".selectionSort").disabled = true
+  // $(".bubbleSort").prop('disabled', true);
+  // $(".insertionSort").prop('disabled', true);
+  // $(".mergeSort").prop('disabled', true);
+  // $(".selectionSort").prop('disabled', true);
+  document.querySelector(".bubbleSort").disabled = true;
+  document.querySelector(".insertionSort").disabled = true;
+  document.querySelector(".mergeSort").disabled = true;
+  document.querySelector(".selectionSort").disabled = true
 }
 
 function disSizeSlider() {
-  document.querySelector("#arr_sz").disabled = true;
+  document.querySelector("#arr_size").disabled = true;
 }
 
 function disNewArrayBtn() {
@@ -21,11 +21,11 @@ function disNewArrayBtn() {
 // **speed slider ko include ni kiya kyuki we are allowing that to happen
 // during the sorting process
 
-function enSortingBtns() { // jab kuch ni hora to enable to use these buttons
-  $(".bubbleSort").prop('disabled', false);
-  $(".insertionSort").prop('disabled', false);
-  $(".mergeSort").prop('disabled', false);
-  $(".selectionSort").prop('disabled', false);
+function enSortingBtn() { // jab kuch ni hora to enable to use these buttons
+  document.querySelector(".bubbleSort").disabled = false;
+  document.querySelector(".insertionSort").disabled = false;
+  document.querySelector(".mergeSort").disabled = false;
+  document.querySelector(".selectionSort").disabled = false;
 }
 
 function enSizeSlider() {
@@ -51,7 +51,7 @@ let delay = 260;
 let delayValue = document.querySelector('#speed_input');
 // event listener to adjust the delay time according to inout
 delayValue.addEventListener('input', () => { // **used arrow function , it gives global scope
-  delay = 320 - parseInt(delayValue.value);
+  delay = 310 - parseInt(delayValue.value);
 });
 
 // SIZE OF THE ARRAY
@@ -92,7 +92,6 @@ function genNewArray(noOfBars = 100) { // 50 is the default size as u visit site
   }
 }
 
-
 // Helper function to delete all the previous bars so that new can be added
 function deleteOldArray() {
     const bar = document.querySelector("#bars");
@@ -106,3 +105,13 @@ newArray.addEventListener("click", () => {
     enSizeSlider();
     genNewArray(arrayLength.value);
 });
+
+// swap function util for sorting algorithms takes input of 2 DOM elements with .style.height feature
+function swap(el1, el2) {
+    console.log('In swap()');
+
+    let temp = el1.style.height;
+    el1.style.height = el2.style.height;
+    el2.style.height = temp;
+
+}

@@ -32,12 +32,12 @@ h1{
     width: 100%;
     height: 500px;
     justify-content: center;
-    transition: 2s all ease;
+    transition: 200s all ease;
 }
 .flex-item{
     background: cyan;
     border: 1pt solid white;
-    width: 7px;
+    width: 9px;
     transition: 0.1s all ease;
 }
 
