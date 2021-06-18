@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Algo-Sorter</title>
+  <!-- favicon -->
+  <link rel="icon" href="images\favicon.ico">
   <!-- bootstrap cdn -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -14,14 +16,14 @@
     <div class="container nav-container">
       <div class="row">
         <div class="col-12 colPad titleCol" id="newArray">
-          <h1 align="center">Algo-Sorter</h1>
+          <h2 align="center">Algo-Visualizer</h2>
         </div>
         <div class="col-6 colPad" id="newArray">
           <button type="button" class="btn btn-lg btn-success newArray-btn newArray">New Array</button>
         </div>
         <div class="col-6 colPad" id="input">
           <span id="size">Size
-            <input id="arr_size" type="range" min="10" max="100" step=1 value=60>
+            <input id="arr_size" type="range" min="8" max="105" step=1 value=60>
           </span>
           <span id="speed">Speed
             <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
@@ -49,7 +51,7 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <script src="index.js" charset="utf-8"></script>
   <script src="sorting_algos/bubble.js"></script>
-
+  <script src="sorting_algos/selection.js"></script>
 </body>
 
 </html>

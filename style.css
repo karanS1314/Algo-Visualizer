@@ -1,67 +1,82 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-    line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
 }
-h1{
+
+h2 {
   font-family: 'Ubuntu', sans-serif;
   color: white;
 }
 
-.center-nav{
+.center-nav {
   text-align: center;
   align-content: center;
 }
-.newArray-btn{
+
+.newArray-btn {
   padding-left: 30%;
   padding-right: 30%;
 }
-.sorting-buttons{
+
+.sorting-buttons {
   margin: 1.7%;
 }
-.colPad{
+
+.colPad {
   padding-top: 1%;
   padding-bottom: 1%;
 }
-.flex-container{
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 500px;
-    justify-content: center;
-    transition: 200s all ease;
+
+.flex-container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
 }
-.flex-item{
-    background: turquoise;
-    border: 1pt solid white;
-    width: 9px;
-    transition: 0.1s all ease;
-}
-.medium-flex-item{
+
+.flex-item {
   background: turquoise;
   border: 1pt solid white;
-  width: 17px;
-  transition: 0.1s all ease;
-}
-.smallest-flex-item{
-  background: turquoise;
-  border: 1pt solid white;
-  width: 35px;
+  width: 9px;
   transition: 0.1s all ease;
 }
 
-#input{
-    display: flex;
-    padding: 10px;
-    justify-content: space-around;
-    color: white;
+.medium-flex-item {
+  background: turquoise;
+  border: 1pt solid white;
+  width: 14px;
+  transition: 0.1s all ease;
 }
-#header{
+
+.small-flex-item {
+  background: turquoise;
+  border: 1pt solid white;
+  width: 30px;
+  transition: 0.1s all ease;
+}
+
+.smallest-flex-item {
+  background: turquoise;
+  border: 1pt solid white;
+  width: 50px;
+  transition: 0.1s all ease;
+}
+
+#input {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  color: white;
+}
+
+#header {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: 	#101010;
+  background-color: #101010;
   padding: 0;
   margin: 0;
 }

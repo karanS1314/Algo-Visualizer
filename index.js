@@ -69,13 +69,13 @@ let array = [];
 // to ek default array generate and page pe show hone ke lie
 genNewArray();
 // array ko uske size ke hisaab se generate krdo
-function genNewArray(noOfBars = 100) { // 50 is the default size as u visit site
+function genNewArray(noOfBars = 60) { // 50 is the default size as u visit site
   deleteOldArray(); // purane vale ko frontend se hataane ke lie
 
   // creating new array of random numbers of length noOfBars --> just creating int array in the memory
   array = [];
   for (let i = 0; i < noOfBars; i++) {
-    array.push(Math.floor(Math.random() * 250) + 5);
+    array.push(Math.floor(Math.random() * 300) + 5);
   }
 
   // select the fiv #bars element
@@ -87,9 +87,13 @@ function genNewArray(noOfBars = 100) { // 50 is the default size as u visit site
     const bar = document.createElement("div");
     bar.style.height = `${array[i]*2}px`; // $ sign is used to access the variables , here array[i] is variable
     bar.classList.add('bar');
-    if(noOfBars < 25){
+    if(noOfBars < 14){
+      bar.innerHTML=`${array[i]}`;
       bar.classList.add('smallest-flex-item');
-    }else if(noOfBars <= 50){
+    }
+    else if(noOfBars < 30){
+      bar.classList.add('small-flex-item');
+    }else if(noOfBars <= 60){
       bar.classList.add('medium-flex-item');
     }
     else{
