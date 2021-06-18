@@ -36,7 +36,7 @@ function enNewArrayBtn() {
   document.querySelector(".newArray").disabled = false;
 }
 
-// DELAY COMPONENT - SPEED OF SORTING
+// DELAY COMPONENT - SPEED OF SORTING-------------------------------------------
 // input in milisec and used in async functions to wait the other functions until its completed
 function waitToComplete(milisec) {
   return new Promise(resolve => {
@@ -54,7 +54,7 @@ delayValue.addEventListener('input', () => { // **used arrow function , it gives
   delay = 310 - parseInt(delayValue.value);
 });
 
-// SIZE OF THE ARRAY
+// SIZE OF THE ARRAY------------------------------------------------------------
 // length of the array
 let arrayLength = document.querySelector('#arr_size');
 // take the arrayLength and make a new array of bars
@@ -62,7 +62,7 @@ arrayLength.addEventListener('input', () => {
   genNewArray(parseInt(arrayLength.value)); // --> implemented in generating array
 });
 
-// GENERATING ARRAY
+// GENERATING ARRAY / BARS-------------------------------------------------------
 // empty array initialise
 let array = [];
 // jab site pe newly visit krenge and then koi input ni hoga size ka
@@ -81,18 +81,25 @@ function genNewArray(noOfBars = 100) { // 50 is the default size as u visit site
   // select the fiv #bars element
   const bars = document.querySelector('#bars');
 
-  // create multipe element div by adding class
+  // create multipe element div by creating single bar of array[i] height
+  // and flex width and then appending that element to the class
   for (let i = 0; i < noOfBars; i++) {
     const bar = document.createElement("div");
-    bar.style.height = `${array[i]*2}px`;
+    bar.style.height = `${array[i]*2}px`; // $ sign is used to access the variables , here array[i] is variable
     bar.classList.add('bar');
-    bar.classList.add('flex-item');
-    bar.classList.add(`barNodocument.querySelector{i}`);
+    if(noOfBars < 25){
+      bar.classList.add('smallest-flex-item');
+    }else if(noOfBars <= 50){
+      bar.classList.add('medium-flex-item');
+    }
+    else{
+      bar.classList.add('flex-item');
+    }
     bars.appendChild(bar);
   }
 }
 
-// Helper function to delete all the previous bars so that new can be added
+// delete all the previous bars so that new can be added
 function deleteOldArray() {
     const bar = document.querySelector("#bars");
     bar.innerHTML = '';
@@ -106,12 +113,12 @@ newArray.addEventListener("click", () => {
     genNewArray(arrayLength.value);
 });
 
-// swap function util for sorting algorithms takes input of 2 DOM elements with .style.height feature
-function swap(el1, el2) {
+// UTILITY FUNCTIONS FOR SORTING------------------------------------------------
+// swap function to implement swap of the bars in the frontend
+function swap(b1, b2) {
     console.log('In swap()');
 
-    let temp = el1.style.height;
-    el1.style.height = el2.style.height;
-    el2.style.height = temp;
-
+    let temp = b1.style.height;
+    b1.style.height = b2.style.height;
+    b2.style.height = temp;
 }

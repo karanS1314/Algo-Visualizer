@@ -35,10 +35,22 @@ h1{
     transition: 200s all ease;
 }
 .flex-item{
-    background: cyan;
+    background: turquoise;
     border: 1pt solid white;
     width: 9px;
     transition: 0.1s all ease;
+}
+.medium-flex-item{
+  background: turquoise;
+  border: 1pt solid white;
+  width: 17px;
+  transition: 0.1s all ease;
+}
+.smallest-flex-item{
+  background: turquoise;
+  border: 1pt solid white;
+  width: 35px;
+  transition: 0.1s all ease;
 }
 
 #input{
