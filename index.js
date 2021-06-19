@@ -75,7 +75,7 @@ function genNewArray(noOfBars = 60) { // 50 is the default size as u visit site
   // creating new array of random numbers of length noOfBars --> just creating int array in the memory
   array = [];
   for (let i = 0; i < noOfBars; i++) {
-    array.push(Math.floor(Math.random() * 300) + 5);
+    array.push(Math.floor(Math.random() * 280) + 5);
   }
 
   // select the fiv #bars element

@@ -1,14 +1,15 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'PT Mono', monospace;
   font-size: 20px;
   padding: 0;
   margin: 0;
   line-height: 1.4;
 }
 
-h2 {
-  font-family: 'Ubuntu', sans-serif;
+h3 {
+  font-family: 'Press Start 2P', cursive;
   color: white;
+  line-height: 2;
 }
 
 .center-nav {
@@ -28,6 +29,7 @@ h2 {
 .colPad {
   padding-top: 1%;
   padding-bottom: 1%;
+  align-items: center;
 }
 
 .flex-container {
@@ -75,26 +77,12 @@ h2 {
 }
 
 #header {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'PT Mono', monospace;
   background-color: #101010;
   padding: 0;
   margin: 0;
 }
-ul.footer {
-  margin-top: 10px;
-  text-align: center;
-}
-
-ul.footer li {
-  color: #333;
-  display: inline-block;
-}
-
-#footer {
-  background: black;
-  bottom: -20px;
-  height: 50px;
-  left: 0;
-  position: absolute;
-  right: 0;
+#newArray{
+  margin-left: auto;
+  margin-right: auto;
 }

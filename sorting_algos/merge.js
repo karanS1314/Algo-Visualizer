@@ -47,14 +47,14 @@ async function merge(barArray, low, mid, high) {
     await waitToComplete(delay); // har transition ke lie delay
     console.log('In merge left loop');
 
-    barArray[low + i].style.background = 'orange'; // left component ke har bar ka color change
+    barArray[low + i].style.background = 'crimson'; // left component ke har bar ka color change
     left[i] = barArray[low + i].style.height; // left new array mei ye left component saath hi saath copy
   }
   for (let i = 0; i < n2; i++) {
     await waitToComplete(delay); // har transition ke lie delay
     console.log('In merge right loop');
 
-    barArray[mid + 1 + i].style.background = 'yellow'; // right component ke har bar ka color change
+    barArray[mid + 1 + i].style.background = 'lightgreen'; // right component ke har bar ka color change
     right[i] = barArray[mid + 1 + i].style.height;  // right new array mei ye left component saath hi saath copy
   }
   await waitToComplete(delay); // left ka color change aur right ka color change ke baad delay
@@ -70,7 +70,7 @@ async function merge(barArray, low, mid, high) {
       if ((n1 + n2) === barArray.length) { // in the last while loop and need to show whole array as sorted
         barArray[k].style.background = '#1E90FF';
       } else {
-        barArray[k].style.background = 'lightgreen'; // sorted color of left + right component
+        barArray[k].style.background = '#9932CC'; // sorted color of left + right component
       }
 
       barArray[k].style.height = left[i]; // kyuki left[i] <= right[j] islie k ki height chote ke equal
@@ -82,7 +82,7 @@ async function merge(barArray, low, mid, high) {
       if ((n1 + n2) === barArray.length) { // in the last while loop and need to show whole array as sorted
         barArray[k].style.background = '#1E90FF';
       } else {
-        barArray[k].style.background = 'lightgreen'; // sorted color of left + right component
+        barArray[k].style.background = '#9932CC'; // sorted color of left + right component
       }
       barArray[k].style.height = right[j]; // kyuki left[i] > right[j] islie k ki height chote ke equal
       j++; // right ka index ++ kyuki uska ek use hogya
@@ -96,7 +96,7 @@ async function merge(barArray, low, mid, high) {
     if ((n1 + n2) === barArray.length) { // in the last while loop and need to show whole array as sorted
       barArray[k].style.background = '#1E90FF';
     } else {
-      barArray[k].style.background = 'lightgreen'; // sorted color of left + right component
+      barArray[k].style.background = '#9932CC'; // sorted color of left + right component
     }
     barArray[k].style.height = left[i];
     i++;
@@ -109,7 +109,7 @@ async function merge(barArray, low, mid, high) {
     if ((n1 + n2) === barArray.length) { // in the last while loop and need to show whole array as sorted
       barArray[k].style.background = '#1E90FF';
     } else {
-      barArray[k].style.background = 'lightgreen'; // sorted color of left + right component
+      barArray[k].style.background = '#9932CC'; // sorted color of left + right component
     }
     barArray[k].style.height = right[j];
     j++;

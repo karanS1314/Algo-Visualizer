@@ -28,7 +28,7 @@ async function insertion() {
     // color
     barArray[i].style.background = 'crimson';
 
-    await waitToComplete(delay + 20); // modified the delay to some how visualize in adequate time
+    await waitToComplete(delay + 10); // modified the delay to some how visualize in adequate time
     // delay for entering the while loop for each index
 
     while (j >= 0 && (parseInt(barArray[j].style.height) > parseInt(key))) { // peeche saare sorted hain i index ke elements islie while loop
@@ -39,7 +39,7 @@ async function insertion() {
       // aur uska color bhi change krte rho
       j--;
 
-      await waitToComplete(delay + 25); // modified the delay to some how visualize in adequate time
+      await waitToComplete(delay + 20); // modified the delay to some how visualize in adequate time
       // delay for each jth transition
     }
 
