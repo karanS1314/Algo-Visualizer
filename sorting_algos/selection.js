@@ -1,11 +1,11 @@
-// jab sbarArrayction sort button ko press kiya to ye sb functions honge
+// jab selection sort button ko press kiya to ye sb functions honge
 const selectionSortBtn = document.querySelector(".selectionSort");
 selectionSortBtn.addEventListener('click',
   async () => { // async function to enable wait for bubble sort to complete
     disSortingBtn();
     disSizeSlider();
     disNewArrayBtn();
-    await selection(); // jabtk bubble sort khtm ni ho jati tb tk ruko
+    await selection(); // jabtk selection sort khtm ni ho jati tb tk ruko
     // then enable the buttons
     // we cannot use setTimeout here as humko nhi pta ki kitna time lgega
     // ye await ke lie jp time hai vo mera waitToComplete leke aara hai
@@ -15,6 +15,7 @@ selectionSortBtn.addEventListener('click',
     enSizeSlider();
     enNewArrayBtn();
   });
+
 async function selection(){
     console.log('In selectionSort');
     const barArray = document.querySelectorAll(".bar");
@@ -28,7 +29,9 @@ async function selection(){
             // as we iterate in jth loop --> crimson
             barArray[j].style.background = 'crimson';
 
-            await waitToComplete(delay); // ek transition pe kitna time in the jth loop from j to j+1
+            await waitToComplete(delay - 10);
+            // modified the delay to some how visualize in adequate time
+            // ek transition pe kitna time in the jth loop from j to j+1
             if(parseInt(barArray[j].style.height) < parseInt(barArray[min_index].style.height)){
                 console.log('In if condition');
                 if(min_index !== i){
@@ -43,11 +46,13 @@ async function selection(){
                 // agar ye change ni hua to mtlb ki vo red ka red hi reh jaega jo min_index hai
             }
         }
-        await waitToComplete(delay);// ek transition pe kitna time in the ith loop from i to i+1
+        await waitToComplete(delay - 10);
+        // modified the delay to some how visualize in adequate time
+        // ek transition pe kitna time in the ith loop from i to i+1
         swap(barArray[min_index], barArray[i]);
-        // change the min barArrayment index back to normal as it is swapped
+        // change the min bar index back to normal as it is swapped
         barArray[min_index].style.background = 'turquoise';
-        // change the sorted barArrayments color to green
+        // change the sorted barArray elements color to green
         barArray[i].style.background = '#1E90FF';
     }
 }
