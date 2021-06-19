@@ -5,6 +5,7 @@ insertionSortBtn.addEventListener('click',
     disSortingBtn();
     disSizeSlider();
     disNewArrayBtn();
+    enResetBtn();
     await insertion(); // jabtk insertion sort khtm ni ho jati tb tk ruko
     // then enable the buttons
     // we cannot use setTimeout here as humko nhi pta ki kitna time lgega
@@ -14,6 +15,7 @@ insertionSortBtn.addEventListener('click',
     enSortingBtn();
     enSizeSlider();
     enNewArrayBtn();
+    disResetBtn();
   });
 
 async function insertion() {

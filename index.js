@@ -18,6 +18,11 @@ function disSizeSlider() {
 function disNewArrayBtn() {
   document.querySelector(".newArray").disabled = true;
 }
+document.querySelector(".reset").disabled = true; // reset function is only on during the sorting algo running
+// deafult reset is of
+function disResetBtn() {
+  document.querySelector(".reset").disabled = true; // after running sorting algos reset will be enable 
+}
 // **speed slider ko include ni kiya kyuki we are allowing that to happen
 // during the sorting process
 
@@ -34,6 +39,10 @@ function enSizeSlider() {
 
 function enNewArrayBtn() {
   document.querySelector(".newArray").disabled = false;
+}
+
+function enResetBtn() {
+  document.querySelector(".reset").disabled = false; // while running sorting algos reset will be enable
 }
 
 // DELAY COMPONENT - SPEED OF SORTING-------------------------------------------
@@ -87,16 +96,14 @@ function genNewArray(noOfBars = 60) { // 50 is the default size as u visit site
     const bar = document.createElement("div");
     bar.style.height = `${array[i]*2}px`; // $ sign is used to access the variables , here array[i] is variable
     bar.classList.add('bar');
-    if(noOfBars < 14){
-      bar.innerHTML=`${array[i]}`;
+    if (noOfBars < 14) {
+      bar.innerHTML = `${array[i]}`;
       bar.classList.add('smallest-flex-item');
-    }
-    else if(noOfBars < 30){
+    } else if (noOfBars < 30) {
       bar.classList.add('small-flex-item');
-    }else if(noOfBars <= 60){
+    } else if (noOfBars <= 60) {
       bar.classList.add('medium-flex-item');
-    }
-    else{
+    } else {
       bar.classList.add('flex-item');
     }
     bars.appendChild(bar);
@@ -105,24 +112,24 @@ function genNewArray(noOfBars = 60) { // 50 is the default size as u visit site
 
 // delete all the previous bars so that new can be added
 function deleteOldArray() {
-    const bar = document.querySelector("#bars");
-    bar.innerHTML = '';
+  const bar = document.querySelector("#bars");
+  bar.innerHTML = '';
 }
 
 // Selecting newarray button from DOM and adding eventlistener
 let newArray = document.querySelector(".newArray");
 newArray.addEventListener("click", () => {
-    enSortingBtn();
-    enSizeSlider();
-    genNewArray(arrayLength.value);
+  enSortingBtn();
+  enSizeSlider();
+  genNewArray(arrayLength.value);
 });
 
 // UTILITY FUNCTIONS FOR SORTING------------------------------------------------
 // swap function to implement swap of the bars in the frontend
 function swap(b1, b2) {
-    console.log('In swap()');
+  console.log('In swap()');
 
-    let temp = b1.style.height;
-    b1.style.height = b2.style.height;
-    b2.style.height = temp;
+  let temp = b1.style.height;
+  b1.style.height = b2.style.height;
+  b2.style.height = temp;
 }

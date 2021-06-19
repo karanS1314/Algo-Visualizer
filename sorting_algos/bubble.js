@@ -5,6 +5,7 @@ bubbleSortBtn.addEventListener('click',
     disSortingBtn();
     disSizeSlider();
     disNewArrayBtn();
+    enResetBtn();
     await bubble(); // jabtk bubble sort khtm ni ho jati tb tk ruko
     // then enable the buttons
     // we cannot use setTimeout here as humko nhi pta ki kitna time lgega
@@ -14,6 +15,7 @@ bubbleSortBtn.addEventListener('click',
     enSortingBtn();
     enSizeSlider();
     enNewArrayBtn();
+    disResetBtn();
   });
 
 async function bubble() {

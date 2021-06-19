@@ -8,6 +8,7 @@ mergeSortBtn.addEventListener('click',
     disSortingBtn();
     disSizeSlider();
     disNewArrayBtn();
+    enResetBtn();
     await mergeSort(barArray, l, r); // jabtk merge sort khtm ni ho jati tb tk ruko
     // then enable the buttons
     // we cannot use setTimeout here as humko nhi pta ki kitna time lgega
@@ -17,6 +18,7 @@ mergeSortBtn.addEventListener('click',
     enSortingBtn();
     enSizeSlider();
     enNewArrayBtn();
+    disResetBtn();
   });
 
 // MAIN MERGE SORT FUNCTION-----------------------------------------------------
@@ -55,11 +57,13 @@ async function merge(barArray, low, mid, high) {
     console.log('In merge right loop');
 
     barArray[mid + 1 + i].style.background = 'lightgreen'; // right component ke har bar ka color change
-    right[i] = barArray[mid + 1 + i].style.height;  // right new array mei ye left component saath hi saath copy
+    right[i] = barArray[mid + 1 + i].style.height; // right new array mei ye left component saath hi saath copy
   }
   await waitToComplete(delay); // left ka color change aur right ka color change ke baad delay
 
-  let i = 0, j = 0, k = low; //*****
+  let i = 0,
+    j = 0,
+    k = low; //*****
   while (i < n1 && j < n2) {
     await waitToComplete(delay); // left aur right new array mei se ek ek bar jo sbse choti hai usko compare krne ka delay
     console.log('In merge while loop');

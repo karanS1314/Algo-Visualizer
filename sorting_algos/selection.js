@@ -5,6 +5,7 @@ selectionSortBtn.addEventListener('click',
     disSortingBtn();
     disSizeSlider();
     disNewArrayBtn();
+    enResetBtn();
     await selection(); // jabtk selection sort khtm ni ho jati tb tk ruko
     // then enable the buttons
     // we cannot use setTimeout here as humko nhi pta ki kitna time lgega
@@ -14,6 +15,8 @@ selectionSortBtn.addEventListener('click',
     enSortingBtn();
     enSizeSlider();
     enNewArrayBtn();
+    disResetBtn();
+
   });
 
 async function selection() {

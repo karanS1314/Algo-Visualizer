@@ -26,6 +26,22 @@ h3 {
   margin: 1.7%;
 }
 
+.reset {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
 .colPad {
   padding-top: 1%;
   padding-bottom: 1%;
@@ -82,7 +98,8 @@ h3 {
   padding: 0;
   margin: 0;
 }
-#newArray{
+
+#newArray {
   margin-left: auto;
   margin-right: auto;
 }
